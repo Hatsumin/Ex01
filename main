@@ -24,9 +24,9 @@ class DiceGame {
         int totalValue = d1.getInt() + d2.getInt();
         System.out.println("Total value: " + totalValue);
         if (totalValue > 7) {
-            System.out.println("You won!");
+            System.out.println(g.getName() + " won!");
         } else {
-            System.out.println("You lost!");
+            System.out.println(g.getName() + " lost!");
         }
     }
 }
