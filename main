@@ -1,0 +1,27 @@
+import java.util.Random;
+
+class DiceGame {
+    int value;
+
+    DiceGame(int range) {
+        Random r = new Random();
+        int n = 1 + r.nextInt(range - 1);
+        value = n;
+    }
+
+    int getInt() {
+        return value;
+    }
+
+    public static void main(String[] args) {
+        DiceGame d1 = new DiceGame(6);
+        DiceGame d2 = new DiceGame(6);
+
+        System.out.println("Rolling dice...");
+        System.out.println("Dice 1: " + d1.getInt());
+        System.out.println("Dice 2: " + d2.getInt());
+        int totalValue = d1.getInt() + d2.getInt();
+        System.out.println("Total value: " + totalValue);
+
+    }
+}
